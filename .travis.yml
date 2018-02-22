@@ -1,12 +1,9 @@
 sudo: required
 language: node_js
 node_js:
-  - node
+- node
 script:
-  - npm run build
-after_success:
-  - cd dist
-  - touch .nojekyll
+- npm run build
 deploy:
   provider: pages
   local-dir: dist
