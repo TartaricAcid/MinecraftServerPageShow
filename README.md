@@ -1,6 +1,6 @@
 # Minecraft Server List
 
-Minecraft服务器列表，请打开[https://tartaricacid.github.io/MinecraftSeverPageShow/](https://tartaricacid.github.io/MinecraftSeverPageShow/)查看详细列表
+Minecraft服务器列表，请打开[https://tartaricacid.github.io/MinecraftServerPageShow/](https://tartaricacid.github.io/MinecraftServerPageShow/)查看详细列表
 
 
 
