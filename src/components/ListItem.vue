@@ -44,7 +44,7 @@
 			viewDetail: function () {
 				if (typeof this.parsed === 'undefined') {
 					if (this.data.announcement) {
-						this.$http.get('/static/markdown/' + this.data.announcement).then((data) => {
+						this.$http.get('./static/markdown/' + this.data.announcement).then((data) => {
 							this.markdown = converter.makeHtml(data.body);
 							this.parsed = true;
 						});
@@ -141,5 +141,6 @@
 		-webkit-border-radius: 2px;
 		-moz-border-radius: 2px;
 		border-radius: 2px;
+		cursor: pointer;
 	}
 </style>
