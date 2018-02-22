@@ -1,2 +1,13 @@
 [
+	{
+		"name": "FTB Horizons III",
+		"maxPlayer": "20",
+		"logo": "https://media.forgecdn.net/avatars/128/156/636445205175164552.png",
+		"downloadUrl": "https://www.feed-the-beast.com/projects/ftb-horizons-iii",
+		"qqGroup": "630943368",
+		"qqGroupUrl": "https://jq.qq.com/?_wv=1027&k=5fpCwPq",
+		"verifyMethod": "mojang",
+		"ip": "47.104.69.109:25565",
+		"announcement": "horizons.md"
+	}
 ]
