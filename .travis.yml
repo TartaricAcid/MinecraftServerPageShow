@@ -1,17 +1,15 @@
 sudo: required
 language: node_js
 node_js:
-  - node
+- node
 script:
-  - npm run build
-after_success:
-  - cd dist
-  - touch .nojekyll
+- npm run build
 deploy:
   provider: pages
   local-dir: dist
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  api_key:
+    secure: Pvp8v1TJdDCdvdGUhtKjonprYVI9lQa7UHvsgNTlztQpX3kGoqJCw/PVSClCvizFD/084SeJ8qgqXG8cYboWwelVEN6uC8Lz+8H0zn6pfyxiofH6S884EsqW440l4ceWTygdGhmQ73Tf4epZb1egQ6dtbVcIXpbzsIATgApaKspSKxQPGkhmt9mSGtJcUNx4c6mxCPZG8IVWPyyrklhFC93/QLDqsz77Cd9lFhxH/i3d/e58OeB7hC0Jodjzd7/lDq1jweb1quza0baRu31sHElxal2cv3f7dY7gp4bD/++FR3O8cSjxL6fnVC4gYOKzt5R2nanIuTUJDnxxqnG8m62kAxY38DVVOOTYIQTt2FPq6t8gDdD6wwcW7GVxBT1mqtAKQhtmpvOqp7nC/rwoNTewYwug2g8lMcgOjFq7p+W61iDHSsapIm2oPKsuGrlwV2/RXru0a3Gg/HkWb7yDUvY+y9pJNGAd4M9+gtFtHfcs6J2IV5OGqRuk6Y7EydxX0FE9+J2gTjIsBq6azX5hXIxZ+Knb6QWDUyb6U2MY2DWmANeBwQOyXHY+d8sDyGoyQOkLDLTm8FBrTbZVahws84rOCT/fiO4YPaPpUjADatjZXYglE/rdSoQ6w+V2Vq5jB7mNdFOIMw+hQbCjBjlF9KJWVYd9KUcq2pcYxXwCVY8=
   keep-history: true
   target-branch: gh-pages
   on:
