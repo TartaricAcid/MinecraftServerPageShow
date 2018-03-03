@@ -1,6 +1,6 @@
 # Minecraft Server List
 
-![build](https://api.travis-ci.org/TartaricAcid/MinecraftServerPageShow.svg?branch=master)
+[![Build Status](https://travis-ci.org/TartaricAcid/MinecraftServerPageShow.svg?branch=master)](https://travis-ci.org/TartaricAcid/MinecraftServerPageShow)
 
 Minecraft服务器列表，请打开[https://tartaricacid.github.io/MinecraftServerPageShow/](https://tartaricacid.github.io/MinecraftServerPageShow/)查看详细列表
 
