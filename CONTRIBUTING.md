@@ -5,7 +5,8 @@
 [
 	{
 		"name": "服务器名称",
-		"maxPlayer": "服务器人数上限",
+		"version": "游戏(整合包)版本",
+		"maxPlayer": "(选填)服务器人数上限",
 		"logo": "服务器图标",
 		"downloadUrl": "整合包下载地址，实在没有就放curseforge吧",
 		"qqGroup": "QQ群",

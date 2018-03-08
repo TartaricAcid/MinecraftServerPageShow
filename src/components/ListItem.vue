@@ -1,7 +1,7 @@
 <template>
-	<li>
+	<div class="item" ref="item">
 		<img :src="data.logo" alt="logo" class="server-logo">
-		<h2 class="server-name">{{ data.name }}<span>（{{ data.maxPlayer }}人）</span></h2>
+		<h2 class="server-name">{{ data.name }}<span>（{{ data.version }}）</span></h2>
 		<a class="server-download" :href="data.downloadUrl" target="_blank">下载整合包</a>
 		<span class="server-group">QQ群：<a :href="data.qqGroupUrl" target="_blank"
 		                                  v-if="data.qqGroupUrl">{{ data.qqGroup}}</a><span
@@ -12,12 +12,13 @@
 			<p>验证方式：{{ verifyMethodText[data.verifyMethod] }} <a v-if="data.verifyMethod === 'tongyi'"
 			                                                     :href="data.tongyiRegisterUrl" target="_blank">注册账号</a>
 			</p>
+			<p v-if="data.maxPlayer">最大人数：{{ data.maxPlayer }}</p>
 			<p>服务器地址：{{data.ip}}
 				<button class="copy-ip" :data-clipboard-text="data.ip">复制</button>
 			</p>
 			<div class="server-announcement" v-html="markdown"></div>
 		</div>
-	</li>
+	</div>
 </template>
 
 <script>
@@ -28,7 +29,7 @@
 	new Clipboard('.copy-ip');
 	export default {
 		name: 'ListItem',
-		props: ['data'],
+		props: ['data', 's', 'index'],
 		data () {
 			return {
 				verifyMethodText: {
@@ -48,12 +49,17 @@
 							this.markdown = converter.makeHtml(data.body);
 							this.parsed = true;
 						});
-					}
-					else {
+					} else {
 						this.parsed = true;
 					}
 				}
 				this.detail = !this.detail;
+			}
+		},
+		mounted () {
+			if (this.s === this.index) {
+				this.viewDetail();
+				window.scroll(0, this.$refs.item.offsetTop);
 			}
 		}
 	}
@@ -64,7 +70,7 @@
 		text-decoration: none;
 	}
 
-	li {
+	.item {
 		background-color: #e9e9e9;
 		padding: 16px;
 		-webkit-border-radius: 4px;
@@ -74,7 +80,7 @@
 		margin: 8px 0;
 	}
 
-	li.detailed {
+	.detailed {
 		height: auto;
 	}
 

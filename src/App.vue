@@ -1,20 +1,23 @@
 <template>
 	<div id="app">
 		<img src="./assets/logo.png" alt="logo" id="logo">
-		<ul>
-			<list-item v-for="item in list" :data="item"></list-item>
-		</ul>
+		<div>
+			<list-item v-for="item, i in list" :data="item" :key="i" :s="s" :index="i"></list-item>
+		</div>
 	</div>
 </template>
 
 <script>
 	import ListItem from './components/ListItem'
+	import url from 'url';
 
 	export default {
 		name: 'App',
 		data () {
+			let s = parseInt(url.parse(window.location.search, true).query.s) || 0;
 			return {
-				list: []
+				s: s - 1,
+				list: [],
 			}
 		},
 		components: {
@@ -36,15 +39,11 @@
 	}
 
 	#logo {
-		width: 100%;
-		max-width: 400px;
+		width: 400px;
+		height: 120px;
+		max-width: 100%;
 		display: block;
 		margin: 20px auto;
 	}
 
-	ul {
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-	}
 </style>

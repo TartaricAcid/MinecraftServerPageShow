@@ -12,6 +12,7 @@
 	"dependencies": {
 		"clipboard": "^1.7.1",
 		"showdown": "^1.8.6",
+		"url": "^0.11.0",
 		"vue": "^2.5.2",
 		"vue-resource": "^1.4.0"
 	},
